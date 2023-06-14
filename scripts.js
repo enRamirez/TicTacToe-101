@@ -10,8 +10,6 @@
 let currentMarker = 'X'
 
 
-
-
 // this "handleClick" function is called when a box is clicked. Here, "element" will hold the same value as "this" does in the HTML. 
 // "this" is a special word in JS but "element" could have been "thing" or "el" or whatever we wanted it to be as long as we use it again in the "console.log" statement
 const handleClick = (element) => {
@@ -25,15 +23,6 @@ const handleClick = (element) => {
     addMarker(element.id)
   }
 }
-
-
-
-
-
-
-
-
-
 
 
 // this function places the "currentMarker" inside the HTML element that was clicked and calls the "changeMarker" function.
@@ -56,14 +45,6 @@ const addMarker = (id) => {
 }
 
 
-
-
-
-
-
-
-
-
 // This "changeMarker" function changes "X" to "O" in the "currentMarker" variable or "O" to "X"
 const changeMarker = () => {
   if(currentMarker === "X"){
@@ -72,14 +53,6 @@ const changeMarker = () => {
     currentMarker = "X"
   }
 }
-
-
-
-
-
-
-
-
 
 
 // This "resetBoard" function is called when the user clicks on the "Restart" button.
@@ -105,5 +78,7 @@ const resetBoard = () => {
 
     // sets the innerHTML to null to replace the "X" or "O"
     squares[i].innerHTML = null
+    
   }  
+  currentMarker ="X"
 }
