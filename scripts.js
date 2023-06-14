@@ -16,7 +16,7 @@ const handleClick = (element) => {
   // this next line prevents an X being changed to an O or an O being changed to an X by...
   //  checking to see if the square clicked has anything in it, if not continue
   if(!document.getElementById(element.id).innerHTML){
-    addMarker(element.id)
+    addMarker(element.id);
   }
 }
 
@@ -63,15 +63,15 @@ const resetBoard = () => {
     squares[i].innerHTML = null
     
   }  
-  currentMarker ="X"
+  location.reload();
 }
 
 const checkForWin = () => {
   if(horizontalWin() || verticalWin() || diagonalWin()) {
     window.alert(`Player ${currentMarker} won!`)
   } else {
-    changeMarker()
-  }
+    changeMarker();
+  } 
 }
 
 const horizontalWin = () => {
@@ -129,7 +129,6 @@ const diagonalWin = () => {
   return true;
 } else {return false;}
 }
-
 
 
 
